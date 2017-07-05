@@ -6,4 +6,3 @@ Fluentd fails to connect to kubernetes
 
 It is because kubernetes API server was not using SSL, so to connect kubernetes with HTTP, I created a config map for the fluentd’s configuration file /etc/td-agent/td-agent.conf, this file will have kubernetes API server’s non secure URL and this will override the default https connection. 
 So a config map fluentd-config is created along with the daemon set in the fluentd-es-ds.yaml file.
-
